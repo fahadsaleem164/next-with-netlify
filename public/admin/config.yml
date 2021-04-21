@@ -1,8 +1,8 @@
 backend:
   name: github
   # change repo to your git repository url
-  branch: main
-  repo: next-with-netlify
+  branch: master
+  repo: fahadsaleem164/next-with-netlify
 media_folder: static/assets
 public_folder: /assets
 
@@ -10,6 +10,8 @@ collections:
   - name: Markdown File
     label: Markdown File
     label_singular: Markdown File
+    create: true
+    delete: false 
     folder: /posts/
     summary: '{{title}}'
     description: >
@@ -17,4 +19,5 @@ collections:
       guidelines for BlueEconomy.
     fields:
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'description', name: 'description', widget: 'string', hint: 'Description will be here' }
+      - { label: 'Author', name: 'author', widget: 'string', tagname: 'h1' }
+      - { label: 'description',  name: 'body', widget: 'markdown' , hint: 'Description will be here' }

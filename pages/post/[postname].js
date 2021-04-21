@@ -6,7 +6,7 @@ import Layout from '../../components/Layout'
 
 export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
   if (!frontmatter) return <></>
-
+  
   return (
       <Layout pageTitle={`${siteTitle} | ${frontmatter.title}`}>
         <Link href="/">
@@ -15,8 +15,10 @@ export default function BlogPost({ siteTitle, frontmatter, markdownBody }) {
         <article>
           <h1>{frontmatter.title}</h1>
           <p>By {frontmatter.author}</p>
+          
           <div>
-            <ReactMarkdown source={markdownBody} />
+            {markdownBody}
+            {/* <ReactMarkdown source={markdownBody} /> */}
           </div>
         </article>
       </Layout>

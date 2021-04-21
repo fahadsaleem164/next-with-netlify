@@ -4,6 +4,7 @@ import PostList from '../components/PostList'
 
   const Index = ({ posts ,title, description, ...props }) => {
       return (
+   
         <Layout pageTitle={title}>
           <h1 className="title">Welcome to my blog!</h1>
           <p className="description">
